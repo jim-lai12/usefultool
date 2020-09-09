@@ -1,6 +1,7 @@
 # usefultool
  
 cookieway 整合selenium,cooklib,requests的cookiejar可以相互切換,存檔,讀取
+
 load():讀取,預設檔名為cookie.txt
 
 save():存檔,預設檔名為cookie.txt
