@@ -5,7 +5,7 @@ except ImportError:
 try:
     from cookielib import Cookie
 except ImportError:
-    from http.cookiejar import MozillaCookieJar
+    from http.cookiejar import Cookie
 import requests
 
 
@@ -61,7 +61,7 @@ class CookieWay:
                                  rfc2109=False))
     def reqcj_cj(self,s):
         for s_cookie in s.cookies:
-            self.cj.set_cookie(
+            self.cookiejar.set_cookie(
                 Cookie(version=0, name=s_cookie.name, value=s_cookie.value, port='80', port_specified=False,
                                  domain=s_cookie.domain, domain_specified=True, domain_initial_dot=False,
                                  path="/", path_specified=True, secure=True,
